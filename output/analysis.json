@@ -1,0 +1,411 @@
+[
+  {
+    "projectOverview": {
+      "description": "This Java project appears to be a Spring Boot application that implements user authentication and authorization for a Sakila movie rental database application.",
+      "purpose": "To securely manage access to the Sakila database by providing features such as user registration, login, and role-based access control."
+    }
+  },
+  {
+    "path": "SakilaProject-master/.mvn/wrapper/MavenWrapperDownloader.java",
+    "analysis": {
+      "type": "Dependency Injection",
+      "description": "The class uses a hardcoded dependency on Apache Commons IO to handle file input/output operations."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/test/java/com/sparta/engineering72/sakilaproject/MockTests.java",
+    "analysis": {
+      "name": "testActorByFirstName",
+      "signature": "(void) public void testActorByFirstName()",
+      "description": "Test case: Test the findActorById method of ActorController with an actor's first name",
+      "complexity": "Medium"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/test/java/com/sparta/engineering72/sakilaproject/SakilaProjectApplicationTests.java",
+    "analysis": {
+      "name": "MainController1",
+      "signature": "public void MainController1()",
+      "description": "Test method to verify the home endpoint returns 'home'",
+      "complexity": 2
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/SakilaProjectApplication.java",
+    "error": "No valid JSON block found in LLM response."
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/WebSecurityConfig.java",
+    "analysis": {
+      "name": "userDetailsService",
+      "signature": "@Override public UserDetailsService userDetailsService()",
+      "description": "Returns a UserDetailsService implementation, which is responsible for loading user data from the database.",
+      "complexity": 6
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/SuccessHandler.java",
+    "error": "No valid JSON block found in LLM response."
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/MvcConfig.java",
+    "analysis": {
+      "aspect": "Dependency Injection",
+      "value": "The class uses Spring's dependency injection mechanism to configure the MVC settings."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/UserDetailsServiceImpl.java",
+    "analysis": {
+      "aspect": "Security",
+      "description": "The class uses Spring Security to authenticate users and encrypt passwords using BCrypt."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/FailureHandler.java",
+    "analysis": {
+      "name": "handle",
+      "signature": "void handle(HttpServletRequest, HttpServletResponse, AccessDeniedException) throws IOException, ServletException",
+      "description": "Handles Spring Security access denied exceptions by redirecting to an error page.",
+      "complexity": "Low (simple method that performs a single action)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/CustomerRepository.java",
+    "analysis": {
+      "name": "getCustomerByUsername",
+      "signature": "public Customer getCustomerByUsername(String username)",
+      "description": "Retrieves a customer by their email address.",
+      "complexity": 5
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/RentalRepository.java",
+    "analysis": {
+      "name": "getRentalByCustomerId",
+      "signature": "@Query(value = ..., nativeQuery = true) -> List<Rental>",
+      "description": " Retrieves a list of rentals for a specific customer ID",
+      "complexity": "High (SQL query with joins and parameters)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/StaffRepository.java",
+    "analysis": {
+      "aspect": "Use of Spring Data JPA",
+      "description": "The interface extends JpaRepository, which provides basic CRUD operations for the Staff entity."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/ActorRepository.java",
+    "analysis": {
+      "name": "findActorsByFirstName",
+      "signature": "List<Actor> findActorsByFirstName(String firstName)",
+      "description": "Retrieves a list of actors whose first name matches the provided value.",
+      "complexity": "Low (Simple query using JPQL)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/FilmRepository.java",
+    "analysis": {
+      "name": "getAvailableFilms",
+      "signature": "@Query(value = \"SELECT * FROM film f INNER JOIN inventory i ON f.film_id = i.film_id\", nativeQuery = true)",
+      "description": "Returns a list of all available films.",
+      "complexity": 3
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/CategoryRepository.java",
+    "analysis": {
+      "type": "Inheritance",
+      "message": "This interface extends JpaRepository, which provides basic CRUD operations for JPA repositories."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/respositories/InventoryRepository.java",
+    "analysis": {
+      "name": "deleteInventoryByInventoryId",
+      "signature": "@Modifying public void deleteInventoryByInventoryId(@Param(\"id\")Integer id)",
+      "description": "Deletes the inventory data associated with the given film ID from the database.",
+      "complexity": 5
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/StaffController.java",
+    "analysis": {
+      "type": "Dependency Injection",
+      "description": "The constructor uses autowiring to inject instances of CustomerService, InventoryService, and StaffService into the controller."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/CustomerController.java",
+    "analysis": {
+      "name": "getCustomers",
+      "signature": "/owner/customers",
+      "description": "Filters customers by first name and last name. Returns a list of filtered customers.",
+      "complexity": 7
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/ActorController.java",
+    "analysis": {
+      "name": "getActorFilmDetails",
+      "signature": "/actors/details?id=<id>",
+      "description": "Returns details about an actor's films based on the provided ID.",
+      "complexity": 5
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/MainController.java",
+    "analysis": {
+      "name": "login",
+      "signature": "/login",
+      "description": "Returns 'login' as a response when the login route is requested.",
+      "complexity": "Low (Simple GET Request)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/CategoryController.java",
+    "analysis": {
+      "name": "getCategoryDetails",
+      "signature": "@GetMapping(\"/categories/details\") public String getCategoryDetails(ModelMap modelMap, @RequestParam(value = \"id\") Integer id)",
+      "description": "Retrieves the details of a specific category by its ID and adds it to the request model along with films belonging to that category for rendering in the 'categories/categoryDetails' view.",
+      "complexity": "Medium"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/controller/FilmController.java",
+    "error": "No valid JSON block found in LLM response."
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/StaffService.java",
+    "analysis": {
+      "name": "getStaffByUsername",
+      "signature": "public Staff getStaffByUsername(String username)",
+      "description": "Retrieves a staff entity by its username from the database.",
+      "complexity": "Medium (Database query with username as parameter)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/RentalService.java",
+    "analysis": {
+      "name": "addRental",
+      "signature": "public void addRental(int inventoryId, int customerId, Timestamp returnDate)",
+      "description": "Adds a new rental to the system, including the customer's return date.",
+      "complexity": "High"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/InventoryService.java",
+    "analysis": {
+      "name": "getInventoriesById",
+      "signature": "public Inventory getInventoriesById(Integer id)",
+      "description": "Retrieves a specific inventory item by its ID.",
+      "complexity": "Medium"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/CustomerService.java",
+    "analysis": {
+      "name": "getCustomersByFirstName",
+      "signature": "public List<Customer> getCustomersByFirstName(String firstName)",
+      "description": "Retrieves customers by first name.",
+      "complexity": "Medium (uses a query to filter results)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/CategoryService.java",
+    "analysis": {
+      "name": "getByCategoryId",
+      "signature": "public Category getByCategoryId(Integer id)",
+      "description": "Retrieves a category by its ID using the CategoryRepository.",
+      "complexity": "Moderate (requires a parameter and possibly database query optimization)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/ActorService.java",
+    "analysis": {
+      "name": "getActorByID",
+      "signature": "(int id) -> Actor",
+      "description": "Retrieves an actor by its ID",
+      "complexity": "medium"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/services/FilmService.java",
+    "analysis": {
+      "name": "getFilmByID",
+      "signature": "public Film getFilmByID(int id)",
+      "description": "Retrieves a film by its ID from the database.",
+      "complexity": "medium"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Order.java",
+    "analysis": {
+      "name": "getCustomer",
+      "signature": "() -> Customer",
+      "description": "Getter method to retrieve the customer associated with the order.",
+      "complexity": "Low (1 parameter)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Film.java",
+    "analysis": {
+      "name": "setFilmId",
+      "signature": "public void setFilmId(int filmId)",
+      "description": "Sets the ID of the film.",
+      "complexity": "Low (setter method)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Customer.java",
+    "analysis": {
+      "name": "setCustomerId",
+      "signature": "public void setCustomerId(int customerId)",
+      "description": "Sets customer ID.",
+      "complexity": "low"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Inventory.java",
+    "analysis": {
+      "file_purpose": "This Java class represents an entity in a database, specifically the Inventory table.",
+      "methods": [
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "description": "Returns the ID of the inventory.",
+          "complexity": "Low"
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "description": "Sets the ID of the inventory.",
+          "complexity": "Low"
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "description": "Returns the ID of the film associated with this inventory.",
+          "complexity": "Low"
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "description": "Sets the ID of the film associated with this inventory.",
+          "complexity": "Low"
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "description": "Returns the timestamp when the inventory was last updated.",
+          "complexity": "Low"
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "description": "Sets the timestamp when the inventory was last updated.",
+          "complexity": "Low"
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "description": "Compares this Inventory to another object for equality based on ID and last update timestamps.",
+          "complexity": "Medium"
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "description": "Returns a hash code value for the current state of the object.",
+          "complexity": "Low"
+        }
+      ],
+      "noteworthy_aspects": [
+        {
+          "type": "JPA annotations",
+          "description": "The class is annotated with @Entity, indicating it represents an entity in the database."
+        },
+        {
+          "type": "ID column",
+          "description": "The inventoryId field is annotated with @Id, indicating it's the primary key of the table."
+        }
+      ]
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmActorPK.java",
+    "analysis": {
+      "name": "setActorId",
+      "signature": "public void setActorId(int actorId)",
+      "description": "Sets the actor ID.",
+      "complexity": "Low (setter-only property)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Category.java",
+    "analysis": {
+      "name": "setCategoryId",
+      "signature": "public void setCategoryId(int categoryId)",
+      "description": "Sets the category ID.",
+      "complexity": "Low"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmCategoryPK.java",
+    "analysis": {
+      "name": "setFilmId",
+      "signature": "public void setFilmId(int filmId)",
+      "description": "Sets the film ID of the category",
+      "complexity": "Low"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmActor.java",
+    "error": "No valid JSON block found in LLM response."
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmCategory.java",
+    "analysis": {
+      "name": "setFilmId",
+      "signature": "void setFilmId(Integer filmId)",
+      "description": "Sets the film ID associated with this FilmCategory object.",
+      "complexity": "Simple setter method"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Actor.java",
+    "analysis": {
+      "name": "setActorId",
+      "signature": "public void setActorId(int actorId)",
+      "description": "Setter method for actor ID field.",
+      "complexity": "Simple setter method with direct modification of the private variable."
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Staff.java",
+    "analysis": {
+      "name": "setStaffId",
+      "signature": "public void setStaffId(int staffId)",
+      "description": "Sets the staff ID",
+      "complexity": "1 (simple setter)"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/Rental.java",
+    "analysis": {
+      "name": "setRentalId",
+      "signature": "public void setRentalId(int rentalId)",
+      "description": "Sets the rental ID.",
+      "complexity": "Simple setter method"
+    }
+  },
+  {
+    "path": "SakilaProject-master/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmText.java",
+    "analysis": {
+      "name": "setFilmId",
+      "signature": "public void setFilmId(int filmId)",
+      "description": "Sets the film ID of the film text entity.",
+      "complexity": "Low (simple setter method)"
+    }
+  }
+]
